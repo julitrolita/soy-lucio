@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Website</title>
+<style>
+.container {
+    border: 2px solid #000;
+    padding: 10px;
+    display: flex;
+    height: 200px;
+}
+.item {
+    background: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+<h2>Responsive Website</h2>
+<style>
+@media (max-width:600px){nav{flex-direction:column;}}
+nav{display:flex;gap:10px;background:#333;padding:10px;}
+nav a{color:white;text-decoration:none;}
+</style>
+<nav><a>Home</a><a>Servicios</a><a>Contacto</a></nav>
+</body>
+</html>
