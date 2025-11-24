@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Flex Flow Row Wrap</title>
-<style>
-.container {
-    border: 2px solid #000;
-    padding: 10px;
-    display: flex;
-    height: 200px;
-}
-.item {
-    background: #4caf50;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Flex-Flow: Row Wrap</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* ESTILOS DEL CONTENEDOR FLEX */
+        .container {
+            display: flex;          /* Activa Flexbox */
+            
+            /* PROPIEDAD CLAVE: */
+            flex-flow: row wrap;    /* Equivalente a 'flex-direction: row' + 'flex-wrap: wrap' */
+            
+            /* Estilos visuales del contenedor */
+            background-color: #fff;
+            border: 2px solid #333;
+            padding: 10px;
+            gap: 10px;              /* Espacio entre elementos */
+            max-width: 800px;       /* Ancho máximo para forzar el salto de línea visualmente */
+            margin: 0 auto;         /* Centrar contenedor en pantalla */
+        }
+
+        /* ESTILOS DE LOS ÍTEMS */
+        .item {
+            background-color: #007bff;
+            color: white;
+            width: 150px;           /* Ancho fijo para demostrar el wrap */
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Colores alternos para distinguir mejor */
+        .item:nth-child(even) {
+            background-color: #ff5722;
+        }
+    </style>
 </head>
 <body>
-<h2>Flex Flow Row Wrap</h2>
-<div class="container" style="flex-flow:row wrap;"><div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div></div>
+
+    <h1>Flex-flow: row wrap</h1>
+    <p style="text-align: center;">Redimensiona la ventana del navegador para ver cómo los elementos saltan de línea.</p>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
 </body>
 </html>
