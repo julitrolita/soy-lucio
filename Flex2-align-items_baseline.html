@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Align Items Baseline</title>
 <style>
 .container {
-    border: 2px solid #000;
-    padding: 10px;
-    display: flex;
-    height: 200px;
+  display: flex;
+  height: 200px;
+  align-items: baseline;
+  background-color: DodgerBlue;
 }
-.item {
-    background: #4caf50;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
 }
 </style>
 </head>
 <body>
-<h2>Align Items Baseline</h2>
-<div class="container" style="align-items:baseline;"><div class="item" style="font-size:12px;">1</div><div class="item" style="font-size:30px;">2</div><div class="item" style="font-size:18px;">3</div></div>
+
+<h1>align-items: baseline</h1>
+
+<p>align-items: baseline; aligns the flex items at the baseline of the conatiner:</p>
+
+<div class="container">
+  <div><h2>1</h2></div>
+  <div><h3>2</h3></div>
+  <div><h4>3</h4></div>  
+  <div><small>4</small></div>  
+</div>
+
 </body>
 </html>
