@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Flex Column Reverse</title>
 <style>
 .container {
-    border: 2px solid #000;
-    padding: 10px;
-    display: flex;
-    height: 200px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: DodgerBlue;
 }
-.item {
-    background: #4caf50;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
 }
 </style>
 </head>
 <body>
-<h2>Flex Column Reverse</h2>
-<div class="container" style="flex-direction:column-reverse;"><div class="item">1</div><div class="item">2</div><div class="item">3</div></div>
+
+<h1>flex-direction: column-reverse</h1>
+
+<p>flex-direction: column-reverse; displays the flex items vertically (but from bottom to top):</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
 </body>
 </html>
+
+
