@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Flex Items</title>
-<style>
-.container {
-    border: 2px solid #000;
-    padding: 10px;
-    display: flex;
-    height: 200px;
-}
-.item {
-    background: #4caf50;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Flex Items</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h2 { color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        p { color: #555; margin-bottom: 5px; }
+
+        /* Estilos base para los contenedores */
+        .container {
+            display: flex;
+            background-color: #e0e0e0;
+            border: 1px solid #999;
+            padding: 10px;
+            margin-bottom: 40px;
+            gap: 10px;
+            height: 150px; /* Altura fija para notar align-self */
+        }
+
+        /* Estilos base para los items */
+        .item {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 4px;
+            min-width: 50px;
+        }
+
+        /* --- EJEMPLO 1: Flex Grow (Crecimiento) --- */
+        /* flex-grow: define cuánto espacio disponible ocupa el ítem */
+        .grow-1 { flex-grow: 1; background-color: #ff5722; } /* Crece 1 parte */
+        .grow-2 { flex-grow: 2; background-color: #4caf50; } /* Crece el doble que el de 1 */
+        .no-grow { flex-grow: 0; background-color: #607d8b; } /* No crece (defecto) */
+
+        /* --- EJEMPLO 2: Order y Align-Self --- */
+        
+        /* order: cambia el orden visual sin tocar el HTML */
+        .order-first { 
+            order: -1; 
+            background-color: #e91e63; 
+        }
+
+        /* align-self: rompe la alineación del contenedor padre */
+        .self-start { 
+            align-self: flex-start; 
+            background-color: #9c27b0; 
+        }
+        
+        .self-center { 
+            align-self: center; 
+            background-color: #673ab7; 
+        }
+        
+        .self-end { 
+            align-self: flex-end; 
+            background-color: #3f51b5; 
+        }
+
+    </style>
 </head>
 <body>
-<h2>Flex Items</h2>
-<div class="container"><div class="item">A</div><div class="item">B</div><div class="item">C</div></div>
+
+    <h1>Propiedades de los Flex Items</h1>
+
+    <h2>1. Flex-grow (Rellenar espacio)</h2>
+    <p>Observa cómo el ítem verde ocupa el doble de espacio extra que el naranja.</p>
+    <div class="container">
+        <div class="item no-grow">Fijo (0)</div>
+        <div class="item grow-1">Crece (1)</div>
+        <div class="item grow-2">Crece (2)</div>
+    </div>
+
+    <h2>2. Align-self & Order</h2>
+    <p>El ítem rosa es el "3" en el HTML, pero tiene <code>order: -1</code>. Los otros usan alineación propia.</p>
+    <div class="container">
+        <div class="item self-start">1 (Start)</div>
+        <div class="item self-center">2 (Center)</div>
+        <div class="item order-first">3 (Order -1)</div>
+        <div class="item self-end">4 (End)</div>
+        <div class="item">5 (Auto)</div>
+    </div>
+
 </body>
 </html>
